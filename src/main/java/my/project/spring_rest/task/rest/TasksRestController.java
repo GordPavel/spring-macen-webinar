@@ -1,12 +1,12 @@
 package my.project.spring_rest.task.rest;
 
-import my.project.spring_rest.task.exceptions.TaskNotFoundException;
 import my.project.spring_rest.task.service.Task;
 import my.project.spring_rest.task.service.TaskManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/tasks")
