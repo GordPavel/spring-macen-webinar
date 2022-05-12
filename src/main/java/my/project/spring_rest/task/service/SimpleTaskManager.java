@@ -1,9 +1,17 @@
 package my.project.spring_rest.task.service;
 
-import java.util.*;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
 public class SimpleTaskManager implements TaskManager {
-    private final Map<String, Task> tasksStorage = new HashMap<>();
+    private final Map<String, Task> tasksStorage;
 
     @Override
     public List<Task> getAllTasks() {
@@ -17,6 +25,6 @@ public class SimpleTaskManager implements TaskManager {
 
     @Override
     public void saveTask(Task task) {
-        tasksStorage.put(task.id, task);
+        tasksStorage.put(task.getId(), task);
     }
 }
